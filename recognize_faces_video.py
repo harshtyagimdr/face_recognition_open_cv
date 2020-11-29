@@ -100,15 +100,15 @@ while True:
 
 	# if the video writer is None *AND* we are supposed to write
 	# the output video to disk initialize the writer
-	if writer is None and args["output"] is not None:
-		fourcc = cv2.VideoWriter_fourcc(*"MJPG")
-		writer = cv2.VideoWriter(args["output"], fourcc, 20,
-			(frame.shape[1], frame.shape[0]), True)
+# 	if writer is None and args["output"] is not None:
+# 		fourcc = cv2.VideoWriter_fourcc(*"MJPG")
+# 		writer = cv2.VideoWriter(args["output"], fourcc, 20,
+# 			(frame.shape[1], frame.shape[0]), True)
 
 	# if the writer is not None, write the frame with recognized
 	# faces t odisk
-	if writer is not None:
-		writer.write(frame)
+# 	if writer is not None:
+# 		writer.write(frame)
 
 	# check to see if we are supposed to display the output frame to
 	# the screen
@@ -125,5 +125,5 @@ cv2.destroyAllWindows()
 vs.stop()
 
 # check to see if the video writer point needs to be released
-if writer is not None:
-	writer.release()
+# if writer is not None:
+# 	writer.release()
